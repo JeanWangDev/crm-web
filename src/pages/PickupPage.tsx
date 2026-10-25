@@ -23,7 +23,7 @@ const trafficValueEnum = Object.fromEntries(
 
 export function PickupPage() {
   const actionRef = useRef<ActionType>(null)
-  const tableFormRef = useRef<ProFormInstance>()
+  const tableFormRef = useRef<ProFormInstance>(undefined)
   const navigate = useNavigate()
   const [form] = Form.useForm()
   const [exporting, setExporting] = useState(false)

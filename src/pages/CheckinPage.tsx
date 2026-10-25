@@ -17,7 +17,7 @@ function travelText(row: CheckinRow) {
 
 export function CheckinPage() {
   const actionRef = useRef<ActionType>(null)
-  const formRef = useRef<ProFormInstance>()
+  const formRef = useRef<ProFormInstance>(undefined)
   const [exporting, setExporting] = useState(false)
 
   const columns: ProColumns<CheckinRow>[] = [

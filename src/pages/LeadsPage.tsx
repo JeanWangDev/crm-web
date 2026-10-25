@@ -90,7 +90,7 @@ export function LeadsPage() {
   const { user } = useAuth()
   const isAdmin = user?.role === 'ADMIN'
   const actionRef = useRef<ActionType>(null)
-  const formRef = useRef<ProFormInstance>()
+  const formRef = useRef<ProFormInstance>(undefined)
   const [current, setCurrent] = useState<Lead>()
   const [followups, setFollowups] = useState<Followup[]>([])
   const [open, setOpen] = useState(false)
@@ -306,7 +306,7 @@ export function LeadsPage() {
         ]}
         request={async (params) => {
           const list = await listLeads()
-          const filtered = filterLeads(list, params)
+          const filtered = filterLeads(list, params as Parameters<typeof filterLeads>[1])
           const currentPage = params.current || 1
           const pageSize = params.pageSize || 10
           const start = (currentPage - 1) * pageSize

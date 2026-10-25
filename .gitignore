@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+.wrangler
 .pnp.*
 .yarn/cache
 .yarn/install-state.gz

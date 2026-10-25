@@ -28,7 +28,7 @@ import { exportCsv } from '../utils/exportCsv'
 
 export function StudentsPage() {
   const actionRef = useRef<ActionType>(null)
-  const formRef = useRef<{ getFieldsValue?: () => Record<string, unknown> }>()
+  const formRef = useRef<{ getFieldsValue?: () => Record<string, unknown> }>(undefined)
   const [open, setOpen] = useState(false)
   const [student, setStudent] = useState<Student>()
   const [travel, setTravel] = useState<Travel>({})
