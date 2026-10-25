@@ -11,8 +11,8 @@
 
 ```bash
 cd crm-web
-yarn
-yarn dev
+npm install
+npm run dev
 ```
 
 打开 http://127.0.0.1:5174 ，`/api` 已代理到后端。
