@@ -1,8 +1,10 @@
 import axios from 'axios'
 import { message } from 'antd'
 
+// 本地开发走相对路径 /api（代理到本机）。测试环境打包后直接请求接口域名，
+// 否则浏览器里看到的一直是前端域名 crm-test.aipassly.com。
 const http = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE || '/api',
   timeout: 60000,
 })
 
